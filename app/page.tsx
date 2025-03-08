@@ -1,6 +1,5 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { navItems } from '@/data';
 import Hero from '@/components/Hero';
 import Grid from '@/components/Grid';
