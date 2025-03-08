@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import { navItems } from '@/data';
 import Hero from '@/components/Hero';
@@ -7,11 +8,12 @@ import Footer from '@/components/Footer';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
-import dynamic from 'next/dynamic';
+import nextDynamic from 'next/dynamic';
 
-const GradientBg = dynamic(() => import("@/components/ui/GradientBg").then(mod => mod.default), {
-  ssr: false,
-});
+const GradientBg = nextDynamic(
+  () => import('@/components/ui/GradientBg').then((mod) => mod.default),
+  { ssr: false }
+);
 
 
 const Home = () => {
