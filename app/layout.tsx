@@ -7,8 +7,9 @@ import { ThemeProvider } from './provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Wajeehthebaji",
-  description: 'Personal Portfolio',
+  title: "Wajeeh's Portfolio",
+  description: 'Wajeeh Alam - Engineering Ideas Into Code',
+  icons: '/public/walogo.png',
 };
 
 export default function RootLayout({
