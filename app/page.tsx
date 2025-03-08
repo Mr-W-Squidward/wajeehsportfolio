@@ -1,7 +1,6 @@
 'use client';
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
+import dynamic from 'next/dynamic';
 import { navItems } from '@/data';
 import Hero from '@/components/Hero';
 import Grid from '@/components/Grid';
@@ -9,10 +8,9 @@ import Footer from '@/components/Footer';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
-import nextDynamic from 'next/dynamic';
 
-const GradientBg = nextDynamic(
-  () => import('@/components/ui/GradientBg').then((mod) => mod.default),
+const GradientBg = dynamic(
+  () => import('@/components/ui/GradientBg'),
   { ssr: false }
 );
 
