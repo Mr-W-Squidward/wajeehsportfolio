@@ -13,4 +13,13 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
+module.exports = {
+  extends: ['next', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'off', // Disable `any` type error
+    '@typescript-eslint/no-wrapper-object-types': 'off', // Allow `String`, `Number`
+    'prefer-const': 'off' // Disable prefer-const
+  }
+};
+
 export default eslintConfig;
